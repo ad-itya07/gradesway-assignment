@@ -65,7 +65,7 @@ export function Dashboard({ user, onLogout, onEditQuiz }: DashboardProps) {
 
       <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {quizzes.map((quiz, index) => {
+          {quizzes.map((quiz) => {
             const createdAt = quiz.createdAt ? parseISO(quiz.createdAt) : null
             const formattedDate =
               createdAt && isValid(createdAt) ? format(createdAt, "MMM d, yyyy") : "Date not available"
